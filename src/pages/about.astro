@@ -1,0 +1,108 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ContactCTA from '../components/ContactCTA.astro';
+import Button from '../components/Button.astro';
+import Icon from '../components/Icon.astro';
+---
+
+<BaseLayout title="About | Aayush Chaudhary" description="About Aayush Chaudhary- CV">
+	<div class="stack gap-20">
+		<main class="wrapper about">
+			<section>
+				<h2 class="section-title">SUMMARY</h2>
+				<div class="content">
+					<p>
+					 My name is Aayush Chaudhary. I was born on March 2, 2007, in Nepal. I’m currently pursuing a B.Ed. in English at Koteswor Multiple Campus. I work as a freelance video editor and have edited for Nepali YouTube channels like Sojo Job, Sojo News, Nabin Rides, and Journey. I use tools like Premiere Pro, After Effects, and DaVinci Resolve to deliver clean, creative edits. Focused on growing my skills,  I balance freelance work with my studies and aim to become an more experience in this.
+
+					</p>
+				</div>
+			</section>
+			<section>
+				<h2 class="section-title">EDUCATION</h2>
+				<div class="content">
+					<p> : +2 [ PENTAGON INT'L COLLEGE ] & PURSING BACHELOR IN KMC, KATHMANDU
+
+				</div>
+			</section>
+			<section>
+				<h2 class="section-title">SKILLS</h2>
+				<div class="content">
+					<p> : VIDEO EDITING, GRAPHIC DESIGN, TUTOR, MENTORS, COMMUNICATION AND AI
+
+				</div>
+			</section>
+			<section>
+				<h3 class="section-title">WHY I CHOSE THIS FIELD </h3>
+				<p> When creativity meets technology, it’s called video editing. I’ve always been fascinated by this blend—it pushes me to learn more and bring my ideas to life through visuals. Editing gives me the power to turn imagination into reality, and that’s what drives me every day. </p>
+				<br>
+				<h2 class="section-title"> EXPERIENCE</h2>
+				<div class="content">
+				<h5> PROJECTS : </h5> <p>Youtube channels like:  Sojo Job, Sojo News, Yushh.0 & Freelance.</p>
+					
+					 <p> Jan 2023 – Present (2 yrs, 5 month)
+					 Edited 50+ videos for YouTube
+ 					 channels & freelance clients. </p>
+				</div>
+			</section>
+		</main>
+
+		<div class="know-more-section">
+			<Button href="/bento" variant="primary">
+				Know More About Me
+				<Icon icon="arrow-right" size="1.2em" />
+			</Button>
+		</div>
+
+		<ContactCTA />
+	</div>
+</BaseLayout>
+
+<style>
+	.about {
+		display: flex;
+		flex-direction: column;
+		gap: 3.5rem;
+	}
+
+	section {
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+		color: var(--gray-200);
+	}
+
+	.section-title {
+		grid-column-start: 1;
+		font-size: var(--text-xl);
+		color: var(--gray-0);
+	}
+
+	.content {
+		grid-column: 2 / 4;
+	}
+
+	.know-more-section {
+		display: flex;
+		justify-content: center;
+		padding: 2rem 0;
+		background: var(--gray-999_40);
+		border-top: 1px solid var(--gray-800);
+		border-bottom: 1px solid var(--gray-800);
+	}
+
+	@media (min-width: 50em) {
+		.about {
+			display: grid;
+			grid-template-columns: 1fr 60% 1fr;
+		}
+
+		.about > :global(:first-child) {
+			grid-column-start: 2;
+		}
+
+		section {
+			display: contents;
+			font-size: var(--text-lg);
+		}
+	}
+</style>-

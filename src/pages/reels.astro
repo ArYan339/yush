@@ -1,0 +1,45 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ContactCTA from '../components/ContactCTA.astro';
+import ReelsGrid from '../components/ReelsGrid.astro';
+
+const reels = [
+  {
+    title: "KeepItReal__Dee - MrBeast Secret ",
+    url: "https://youtube.com/shorts/QtZZ8e0paDI?si=ML-bDWsBVoO4ehWf",
+    thumbnail: "/assets/stock-2.jpg"
+  },
+  {
+    title: " Sojonews - India's Driverless 2",
+    url: "https://youtube.com/shorts/vHUxryIWyNU?si=DizukvWoBNlxFIc0",
+    thumbnail: "/assets/stock-4.jpg"
+  },
+  {
+    title: " Nabinriders -   Upper Mustang",
+    url: "https://youtube.com/shorts/_pL7xndA_xg?si=7fcDyIfNPl1zOZEn",
+    thumbnail: "/assets/stock-3.jpg"
+  },
+  {
+    title: " Nabinriders -  Upper Mustang food eating",
+    url: "https://youtube.com/shorts/noqHHb1evno?si=TRduqSeOFStwnJCl",
+    thumbnail: "/assets/stock-1.jpg"
+  }
+];
+---
+
+<BaseLayout title="Reels | Aayush Chaudhary" description="Check out my video editing reels">
+  <div class="stack gap-20">
+    <main class="wrapper stack gap-8">
+      <h1>Featured Reels</h1>
+      <ReelsGrid reels={reels} />
+    </main>
+    <ContactCTA />
+  </div>
+</BaseLayout>
+
+<style>
+  h1 {
+    font-size: var(--text-4xl);
+    color: var(--gray-0);
+  }
+</style>
